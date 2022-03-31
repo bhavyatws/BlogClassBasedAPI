@@ -43,13 +43,14 @@ class RegisterSerializer(serializers.ModelSerializer):
 '''
 
 class RegisterSerializer(serializers.ModelSerializer):
-    password=serializers.CharField(write_only=True,required=True,validators=[validate_password])
-    password2=serializers.CharField(write_only=True,required=True)
+    # password=serializers.CharField(write_only=True,required=True,validators=[validate_password])
+    # password2=serializers.CharField(write_only=True,required=True)
     class Meta:
         model=User
-        fields=['username','email','first_name','last_name','password','password2',]
-    def validate(self,attrs):#this function name must be validate
+        fields=['username','email','first_name','last_name','password']
+    # def validate(self,attrs):#this function name must be validate
         
-        if attrs['password'] != attrs['password2']:
-            raise serializers.ValidationError({'password':'Both password should be same'})
-        return attrs
+    #     if attrs['password'] != attrs['password2']:
+    #         raise serializers.ValidationError({'password':'Both password should be same'})
+    #     return attrs
+    
