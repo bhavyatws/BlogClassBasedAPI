@@ -53,4 +53,5 @@ class RegisterSerializer(serializers.ModelSerializer):
     #     if attrs['password'] != attrs['password2']:
     #         raise serializers.ValidationError({'password':'Both password should be same'})
     #     return attrs
+   
     
