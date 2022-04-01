@@ -18,15 +18,15 @@ class RegisterView(generics.CreateAPIView):
         instance.save()
 
 
+# Custom obtain_auth_token while login
 
 from rest_framework.views import APIView
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
-
 from rest_framework.authentication import TokenAuthentication
 from django.contrib.auth.hashers import check_password
 from rest_framework.permissions import IsAuthenticated
-# Create your views here.
+
 class LoginApiView( APIView ):
 
     def post(self, request, *args, **kwargs):

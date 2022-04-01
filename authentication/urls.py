@@ -1,7 +1,7 @@
 from django.urls import path
 from authentication.views import RegisterView
-# from rest_framework_simplejwt.views import TokenRefreshView
 from authentication.views import LoginApiView#Custom getting auth token
+# from rest_framework_simplejwt.views import TokenRefreshView
 from rest_framework.authtoken import views
 
 urlpatterns = [
